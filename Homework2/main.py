@@ -10,11 +10,13 @@ def find(extract_date):
     mm = extract_date.split(',')[0].split()[0]
     dd = extract_date.split(',')[0].split()[-1]
     mn = mthtonum[mm]
+    int(yy)
+    int(dd)
     return str(mn) + '/' + dd + '/' + yy
+    except:
+        return''
 
-
-while True:
-    inp = input()
-    if inp == '-1':
-        break
-print(find(inp))
+    with open('inputDates.txt') as f:
+        for x in f.readlines():
+            if x.strip() != '-1':
+    print(fid(x.strip()))
